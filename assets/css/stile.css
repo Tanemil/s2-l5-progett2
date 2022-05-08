@@ -89,16 +89,29 @@ header input{
 }
 
 header input:checked ~ nav {
-    height: 20vh;
+    height: 20rem;
 }
 
 header nav > a {
     color: rgb(97, 97, 97);
 }
 
+header nav > a:hover {
+    color: #e42424;
+    text-decoration: underline;
+}
+
 header nav button a {
     padding: 1rem;
-} 
+}
+
+header nav button {
+    transition: border-radius 0.5s ease-out;
+}
+
+header nav button:hover {
+    border-radius: 25px;
+}
 
 
 /* MAIN */
@@ -193,10 +206,19 @@ main.contatti form input {
 
 main.contatti form input[name="nome"] , main.contatti form input[name="email"] {
     height: 3rem;
+    font-style: italic;
+    font-family: 'Fira Sans', sans-serif;
+    padding-left: 1rem;
+    box-sizing: border-box;
 }
 
-main.contatti form input[name="messaggio"] {
+main.contatti form textarea[name="messaggio"] {
     height: 6rem;
+    width: 80%;
+    font-family: 'Fira Sans', sans-serif;
+    font-style: italic;
+    padding: 1rem 0 0 1rem;
+    box-sizing: border-box;
 }
 
 main.contatti form input[name="submit"] {
